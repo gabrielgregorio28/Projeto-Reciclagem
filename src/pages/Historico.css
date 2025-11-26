@@ -1,0 +1,173 @@
+.historico-container {
+  padding: 20px;
+}
+
+.titulo-historico {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: green;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 15px;
+}
+
+.lista-coletas {
+  list-style: none;
+  padding: 0;
+}
+
+.item-coleta {
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.foto-coleta {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #ddd;
+}
+
+.info-coleta {
+  flex: 1;
+}
+
+.data-coleta {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.materiais-coleta {
+  font-size: 14px;
+  color: #555;
+}
+
+.pontos-coleta {
+  margin-top: 6px;
+  color: green;
+  font-size: 16px;
+}
+
+.total-pontos {
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.item-coleta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.botao-excluir {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botao-excluir:hover {
+  background-color: #45a049;
+}
+
+/* ===== POPUP DE CONFIRMAÇÃO ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.popup-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.popup-sim {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-nao {
+  background-color: #c62828;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Botão de voltar*/
+.header-historico {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 1px 20px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.botao-voltar-historico {
+  background-color: green;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.botao-voltar-historico:hover {
+  background-color: #45a049
+}
+
+.seta-esquerda {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}

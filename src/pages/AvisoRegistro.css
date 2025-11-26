@@ -1,0 +1,55 @@
+/* Fundo escurecido */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Caixa branca */
+.modal-caixa {
+  background: white;
+  color: black;
+  padding: 24px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+}
+
+/* Título */
+.modal-titulo {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Mensagem */
+.modal-texto {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Pontos */
+.modal-pontos {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Botão de fechar */
+.modal-btn-fechar {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}

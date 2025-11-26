@@ -1,0 +1,101 @@
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #4CAF50; /* cor do cabeçalho */
+  height: 60px;
+  border-bottom: 5px solid white;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/* Botão do corpo e do cabeçalho */
+.btn-enviar {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 200px;
+  font-size: 14px;
+}
+
+.btn-enviar:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Ajuste específico para o botão do cabeçalho */
+.btn-header {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+  
+/* Conteúdo principal centralizado */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-cadastro {
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn-cadastro:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/*Mensagem para quando o usuário estiver conectado*/
+.area-logado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nome-usuario {
+  color: white;
+  font-size: 16px;
+}
+
+.btn-sair {
+  background: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: green;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-sair:hover {
+  transform: scale(1.05);
+}
+
