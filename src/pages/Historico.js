@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getDatabase, ref, onValue, remove } from "firebase/database";
 import { Link } from "react-router-dom";
-import { auth } from "../Firebase";   // ✔ Agora usa o Firebase Auth
+import { auth } from "../Firebase";
 import "./Historico.css";
 
 export default function Historico() {
@@ -9,12 +9,12 @@ export default function Historico() {
   const [carregando, setCarregando] = useState(true);
   const [idParaExcluir, setIdParaExcluir] = useState(null);
 
-  // ---- Função para excluir um registro ----
+  //Função para excluir um registro
   function excluirRegistroConfirmado() {
     if (!idParaExcluir) return;
 
-    const userId = auth.currentUser?.uid; // 🔥 UID genuíno do usuário logado
-    if (!userId) return; // segurança
+    const userId = auth.currentUser?.uid; 
+    if (!userId) return;
 
     const db = getDatabase();
     const refItem = ref(db, `coletas/${userId}/${idParaExcluir}`);
@@ -25,7 +25,7 @@ export default function Historico() {
 
   // ---- Buscar histórico ----
   useEffect(() => {
-    const userId = auth.currentUser?.uid; // 🔥 obtém o UID real
+    const userId = auth.currentUser?.uid; 
     if (!userId) return;
 
     const db = getDatabase();

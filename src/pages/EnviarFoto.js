@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Upload, ArrowLeft, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getDatabase, push, ref } from "firebase/database";
-import { auth } from "../Firebase";   // ✔ agora usa o Firebase Auth
+import { auth } from "../Firebase";   
 import "./EnviarFoto.css";
 import CalcularPontos from "../pages/CalcularPontos";
 import AvisoRegistro from "../pages/AvisoRegistro";
@@ -18,9 +18,9 @@ export default function EnviarFoto() {
   const [mostrarModal, setMostrarModal] = useState(false);
   const [pontosGanhos, setPontosGanhos] = useState(0);
 
-  // 🔥 Agora o UID vem do Firebase Authentication
+  //Pega a ID do usuário do Firebase Authentication
   const user = auth.currentUser;
-  const userId = user?.uid; // já está logado, então sempre existe
+  const userId = user?.uid; 
 
   const db = getDatabase();
   const coletasRef = ref(db, "coletas/" + userId);
@@ -45,9 +45,9 @@ export default function EnviarFoto() {
     });
   }
 
-  // -------------------------------
-  // FUNÇÃO PRINCIPAL DE ENVIAR FOTO
-  // -------------------------------
+ 
+ 
+ //Solicita que o usuário envie uma foto para fazer o registro
   async function enviarFoto() {
     if (!foto) {
       alert("Selecione uma foto antes de enviar!");
@@ -55,7 +55,7 @@ export default function EnviarFoto() {
     }
 
     try {
-      // 1️⃣ Envia foto para o Cloudinary
+      //Envia a foto para o cloudnary para salvar como link
       const formData = new FormData();
       formData.append("file", foto);
       formData.append("upload_preset", "Projeto_Reciclagem");
@@ -74,10 +74,10 @@ export default function EnviarFoto() {
 
       const urlFoto = dados.secure_url;
 
-      // 2️⃣ Calcula pontos
+      // Faz cáculo de pontos do usuários com base nos itens selecionados 
       const pontos = CalcularPontos(foto, materiais);
 
-      // 3️⃣ Salva no Firebase dentro do UID do usuário autenticado
+      // Salva dados da coleta dentro da ID do usuário no Firebase
       await push(coletasRef, {
         fotoUrl: urlFoto,
         materiais,
@@ -85,7 +85,7 @@ export default function EnviarFoto() {
         data: new Date().toISOString(),
       });
 
-      // 4️⃣ Mostra modal de sucesso
+      // Exibe a tela de registro feito e mostra a quantidade de pontos marcados
       setPontosGanhos(pontos);
       setMostrarModal(true);
 
@@ -95,6 +95,7 @@ export default function EnviarFoto() {
     }
   }
 
+  //Função principal para fazer o registro da coleta e selecioanr os tipos de materiais 
   return (
     <div className="container-enviar">
 
@@ -126,6 +127,7 @@ export default function EnviarFoto() {
           </button>
         </div>
       )}
+      
 
       <div className="lista-materiais">
         <label><input type="checkbox" name="papel" onChange={handleMaterial} /> Papel</label>

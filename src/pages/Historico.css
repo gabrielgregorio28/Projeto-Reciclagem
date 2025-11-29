@@ -2,6 +2,7 @@
   padding: 20px;
 }
 
+/*Título*/
 .titulo-historico {
   font-size: 24px;
   font-weight: bold;
@@ -12,11 +13,13 @@
   border-radius: 15px;
 }
 
+/*Lista de materiais*/
 .lista-coletas {
   list-style: none;
   padding: 0;
 }
 
+/*Checkbox lista*/
 .item-coleta {
   background: #f0f0f0;
   padding: 12px;
@@ -35,34 +38,31 @@
   background: #ddd;
 }
 
+/*Informações sobre da coleta*/
 .info-coleta {
   flex: 1;
 }
 
+/*Data*/
 .data-coleta {
   font-weight: bold;
   margin-bottom: 4px;
 }
 
+/*Materiais registrados*/
 .materiais-coleta {
   font-size: 14px;
   color: #555;
 }
 
+/*Pontos maracdos*/
 .pontos-coleta {
   margin-top: 6px;
   color: green;
   font-size: 16px;
 }
 
-.total-pontos {
-  color: green;
-  font-weight: bold;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
+/*Caixa para cada regsitro*/
 .item-coleta {
   display: flex;
   align-items: center;
@@ -73,6 +73,7 @@
   margin-bottom: 20px;
 }
 
+/*Pontos para excluir regsitro*/
 .botao-excluir {
   background-color: green;
   color: white;
@@ -87,7 +88,7 @@
   background-color: #45a049;
 }
 
-/* ===== POPUP DE CONFIRMAÇÃO ===== */
+/*Tela de confirmação*/
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -100,6 +101,7 @@
   justify-content: center;
 }
 
+/*Caixa e texto popup*/
 .popup {
   background: white;
   color: black;
@@ -111,6 +113,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
+/*Posição botões*/
 .popup-botoes {
   display: flex;
   justify-content: center;
@@ -118,6 +121,7 @@
   margin-top: 18px;
 }
 
+/*Botão de confirmação SIM*/
 .popup-sim {
   background-color: #2e7d32;
   color: white;
@@ -127,7 +131,7 @@
   font-weight: bold;
   cursor: pointer;
 }
-
+/*Botão de confirmação NÃO*/
 .popup-nao {
   background-color: #c62828;
   color: white;
@@ -138,7 +142,7 @@
   cursor: pointer;
 }
 
-/*Botão de voltar*/
+/*Cabeçalho histórico*/
 .header-historico {
   display: flex;
   align-items: center;
@@ -150,6 +154,7 @@
   margin-bottom: 20px;
 }
 
+/*Botão de voltar*/
 .botao-voltar-historico {
   background-color: green;
   color: white;
@@ -162,10 +167,11 @@
   text-decoration: none;
 }
 
+/*Botão de voltar*/
 .botao-voltar-historico:hover {
   background-color: #45a049
 }
-
+/*Botão de voltar*/
 .seta-esquerda {
   font-size: 18px;
   font-weight: bold;

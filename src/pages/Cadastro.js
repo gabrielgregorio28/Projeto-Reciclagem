@@ -16,16 +16,16 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      // 1 - Criar usuário no Firebase Auth
+      //Criar usuário no Firebase Auth
       const credenciais = await createUserWithEmailAndPassword(auth, email, senha);
       const user = credenciais.user;
 
-      // 2 - Salvar o nome no perfil do Auth
+      //Salvar o nome no perfil do Auth
       await updateProfile(user, {
         displayName: nome,
       });
 
-      // 3 - Salvar dados extras no Realtime Database
+      //Salvar dados no Realtime Database
       await set(ref(db, "usuarios/" + user.uid), {
         nome: nome,
         email: email,
@@ -33,7 +33,7 @@ export default function Login() {
 
       alert("Cadastro realizado com sucesso!");
 
-      // 4 - Redirecionar para homepage já logado
+      //Redirecionar para homepage depois do login efetuado
       navigate("/");
 
     } catch (erro) {

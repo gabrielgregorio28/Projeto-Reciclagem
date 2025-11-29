@@ -1,10 +1,11 @@
 import "./AvisoRegistro.css";
 
+//Tela de aviso após o usuário fazer o resgistro de forma correta
 export default function ModalSucesso({ pontos, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="modal-caixa">
-
+ 
         <h2 className="modal-titulo">Registro Concluído!</h2>
 
         <p className="modal-texto">

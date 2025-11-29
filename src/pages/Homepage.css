@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #4CAF50; /* cor do cabeçalho */
+  background-color: #4CAF50; 
   height: 60px;
   border-bottom: 5px solid white;
 }
@@ -41,7 +41,7 @@
   transform: scale(1.05);
 }
 
-/* Ajuste específico para o botão do cabeçalho */
+/* Ajuste botão do cabeçalho */
 .btn-header {
   padding: 10px 20px;
   font-size: 14px;
@@ -57,6 +57,7 @@
   gap: 20px;
 }
 
+/*Botão de cadastro*/
 .btn-cadastro {
   padding: 15px 30px;
   background-color: #4CAF50;
@@ -79,11 +80,13 @@
   gap: 12px;
 }
 
+/*Nome do usuáiro*/
 .nome-usuario {
   color: white;
   font-size: 16px;
 }
 
+/*Botão sair*/
 .btn-sair {
   background: white;
   border: none;
